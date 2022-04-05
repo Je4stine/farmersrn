@@ -1,8 +1,10 @@
 import { View, Text, TextInput, StyleSheet } from 'react-native';
 import React from 'react';
 import Countries from '../Countries';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
-export default function SelectCountry() {
+
+export default function SelectCountry({navigation}) {
   return (
     <View style={{backgroundColor:'#D3D3D3', flex:1}}>
         <View >
@@ -11,7 +13,9 @@ export default function SelectCountry() {
                 style={styles.searchCountry}
             />
         </View>
-      <Countries/>
+      <TouchableOpacity onPress={()=>navigation.navigate('Register')}>
+      <Countries />
+      </TouchableOpacity>
       <Countries/>
       <Countries/>
       <Countries/>

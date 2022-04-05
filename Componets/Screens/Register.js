@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet, TextInput, ScrollView, TouchableOpacity } from 'react-native'
 import React from 'react'
 
-export default function Register() {
+export default function Register({navigation}) {
   return (
     <ScrollView style={{flex:1}}>
         <View style={{alignItems:'center', justifyContent:'center'}}>
@@ -52,7 +52,7 @@ export default function Register() {
                 Terms of use privacy policy About Blog Language
             </Text>
         </View>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=>navigation.navigate('VerificationScreen')}>
         <View style={{backgroundColor:'orange', height: 50, width:'90%', alignSelf:'center', borderRadius:5, alignItems:'center', justifyContent:'center'}}>
             <Text style={{color:'white', fontSize:15, fontWeight:'bold'}}>Sign Up</Text>
         </View>
